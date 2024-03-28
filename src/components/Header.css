@@ -1,0 +1,52 @@
+.header {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../assets/sun.jpeg);
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.header-title {
+  font-weight: bolder;
+  padding: 3rem;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Media query */
+
+@media only screen and (min-width: 45em) {
+  .header {
+    height: 20vh;
+  }
+
+  .header-title {
+    padding: 4rem;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .header {
+    height: 25vh;
+  }
+
+  .header-title {
+    padding: 4rem;
+    font-size: 3rem;
+  }
+}

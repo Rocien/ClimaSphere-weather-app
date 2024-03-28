@@ -1,0 +1,51 @@
+.weather-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--transparent-hover);
+  color: var(--white);
+}
+
+.weather-title {
+  text-align: center;
+  padding: 2rem;
+}
+
+.weather-icon {
+  width: 6rem;
+}
+
+.wind {
+  padding-bottom: 2rem;
+}
+
+.weather-info {
+  text-align: center;
+  padding: 1rem;
+  color: var(--white);
+}
+
+/* Media query */
+
+@media only screen and (min-width: 45em) {
+  .weather-title {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+
+  .weather-icon {
+    width: 6.5rem;
+  }
+
+  .weather-description,
+  .temperature,
+  .feelsLike {
+    font-size: 1.5rem;
+  }
+
+  .wind {
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+  }
+}

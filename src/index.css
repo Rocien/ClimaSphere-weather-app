@@ -1,0 +1,159 @@
+:root {
+  --sunny-yellow: #ffd700;
+  --sky-blue: #87ceeb;
+  --cloud-gray: #bec1c4;
+  --stormy-blue: #305f72;
+  --sunset-orange: #ffa07a;
+  --night-black: #343a40;
+  --deep-shade: #02223e;
+  --shade-blue-gray: #3d5468;
+  --white: #fff;
+  --black: #000;
+  --alert-red: #d96666;
+  --cyan-green: #36bf7f;
+  --dark-gray: #242424;
+  --transparent-hover: rgba(0, 255, 255, 0.1);
+  --sunny-yellow-transparent: rgba(255, 223, 0, 0.1);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+  line-height: 1.5;
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(./assets/bluesky.jpeg);
+  background-size: cover;
+  /* background-color: #242424; */
+}
+
+/* Update default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0 0 0rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: var(--cyan-green);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--alert-red);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Containers ---------- */
+
+.container {
+  width: min(80em, 100%);
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.container--text {
+  width: min(45em, 100%);
+}
+
+/* CSS RESET ENDS HERE */
+
+.btn {
+  /* common styles */
+  display: inline-block;
+  background-color: var(--deep-shade);
+  border: 0.125em solid var(--deep-shade);
+  color: var(--white);
+  border-radius: 1rem;
+  text-align: center;
+
+  /* links necessary styles */
+  text-decoration: none;
+
+  /* button necessary styles */
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--shade-blue-gray);
+  border-color: var(--shade-blue-gray);
+  color: var(--white);
+}

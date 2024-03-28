@@ -1,0 +1,9 @@
+.loading-container {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.loading-text {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,29 @@
+.location-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.location-info {
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Media query */
+
+@media only screen and (min-width: 45em) {
+  .location-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .location-bar {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0rem;
+    padding: 2rem;
+  }
+}
